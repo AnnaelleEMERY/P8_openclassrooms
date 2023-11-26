@@ -427,3 +427,7 @@ footer div {
     top: 40%;
     right: 20px;
 }
+
+.arrow {
+    z-index: 200;
+}

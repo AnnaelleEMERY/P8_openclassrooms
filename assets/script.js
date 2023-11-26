@@ -29,4 +29,6 @@ function initslider() {
             slide.setAttribute("src", slides[slideIdx]);
         });
     });
+
+    document.querySelectorAll(".dot").forEach(function (elt) {});
 }
