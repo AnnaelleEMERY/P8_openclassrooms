@@ -13,6 +13,7 @@ const taglines = [
 ];
 
 var slideIdx = 0;
+var taglineIdx = 0;
 
 function initslider() {
     document.querySelectorAll(".arrow").forEach(function (elt) {
@@ -21,12 +22,17 @@ function initslider() {
                 console.log("LEFT");
                 if (slideIdx <= 0) slideIdx = slides.length - 1;
                 else slideIdx--;
+                if (taglineIdx <= 0) taglineIdx = taglines.length - 1;
+                else taglineIdx--;
             } else {
                 console.log("RIGHT");
                 if (slideIdx >= slides.length - 1) slideIdx = 0;
                 else slideIdx++;
+                if (taglineIdx >= taglines.length - 1) taglineIdx = 0;
+                else taglineIdx++;
             }
             slide.setAttribute("src", slides[slideIdx]);
+            tagline.innerHTML = taglines[taglineIdx];
         });
     });
 
